@@ -1,9 +1,15 @@
 <ion-app>
   <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title>
-        Le Bateau Thibault
-      </ion-title>
+      <ion-buttons slot="start">
+        <img class="avatar" src="./../../assets/bateauthibaultLogo.PNG" />
+        <ion-title>
+          LE BATEAU DE THIBAULT
+        </ion-title>
+      </ion-buttons>
+      <ion-buttons slot="end" color="primay">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
@@ -50,7 +56,10 @@
           <div>
             <ion-row>
               <ion-col class="ion-align-self-start">
-                <ion-button fill="outline">Produits et promotions</ion-button>
+                <ion-button fill="outline">
+                  <ion-icon name="fish-outline">
+                  </ion-icon>&nbsp; Produits et promotions
+                </ion-button>
               </ion-col>
             </ion-row>
           </div>
@@ -60,16 +69,24 @@
           <div>
             <ion-row>
               <ion-col class="ion-align-self-start">
-                <ion-button fill="outline">Bateaux</ion-button>
+                <ion-button fill="outline">
+                  <ion-icon name="boat-outline"></ion-icon>&nbsp; Bateaux
+                </ion-button>
               </ion-col>
               <ion-col class="ion-align-self-center">
-                <ion-button fill="outline">Restaurants</ion-button>
+                <ion-button fill="outline">
+                  <ion-icon name="restaurant-outline"></ion-icon>&nbsp; Restaurants
+                </ion-button>
               </ion-col>
               <ion-col class="ion-align-self-end">
-                <ion-button fill="outline">Recettes</ion-button>
+                <ion-button fill="outline">
+                  <ion-icon name="receipt-outline"></ion-icon>&nbsp; Recettes
+                </ion-button>
               </ion-col>
               <ion-col>
-                <ion-button fill="outline">Contact</ion-button>
+                <ion-button fill="outline">
+                  <ion-icon name="call-outline"></ion-icon>&nbsp; Contact
+                </ion-button>
               </ion-col>
             </ion-row>
           </div>
@@ -77,10 +94,4 @@
       </div>
     </div>
   </ion-content>
-
-  <ion-footer>
-    <ion-toolbar>
-      <ion-title>Footer</ion-title>
-    </ion-toolbar>
-  </ion-footer>
 </ion-app>
