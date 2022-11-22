@@ -1,7 +1,7 @@
 <ion-app>
   <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-buttons slot="start">
+      <ion-buttons slot="start" (click)="onGoToHome()">
         <img class="avatar" src="./../../assets/bateauthibaultLogo.PNG" />
         <ion-title>
           LE BATEAU DE THIBAULT
@@ -56,7 +56,7 @@
           <div>
             <ion-row>
               <ion-col class="ion-align-self-start">
-                <ion-button fill="outline">
+                <ion-button fill="outline" (click)="onGoToProduits()">
                   <ion-icon name="fish-outline">
                   </ion-icon>&nbsp; Produits et promotions
                 </ion-button>
@@ -64,22 +64,22 @@
             </ion-row>
             <ion-row>
               <ion-col class="ion-align-self-start">
-                <ion-button fill="outline">
+                <ion-button fill="outline" (click)="onGoToBateaux()">
                   <ion-icon name="boat-outline"></ion-icon>&nbsp; Bateaux
                 </ion-button>
               </ion-col>
               <ion-col class="ion-align-self-center">
-                <ion-button fill="outline">
+                <ion-button fill="outline" (click)="onGoToRestaurants()">
                   <ion-icon name="restaurant-outline"></ion-icon>&nbsp; Restaurants
                 </ion-button>
               </ion-col>
               <ion-col class="ion-align-self-end">
-                <ion-button fill="outline">
+                <ion-button fill="outline" (click)="onGoToRecettes()">
                   <ion-icon name="receipt-outline"></ion-icon>&nbsp; Recettes
                 </ion-button>
               </ion-col>
               <ion-col>
-                <ion-button fill="outline">
+                <ion-button fill="outline" (click)="onGoToContact()">
                   <ion-icon name="call-outline"></ion-icon>&nbsp; Contact
                 </ion-button>
               </ion-col>
