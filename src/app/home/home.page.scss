@@ -1,3 +1,36 @@
 ion-content {
-    --background: #ccc url("../assets/beach1.jpg") no-repeat center center / cover;
+    --background: #ccc url("../../assets/beach1.jpg") no-repeat center center / cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    align-items: center;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+}
+
+.text-style {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    align-items: center;
+}
+
+.espace {
+    margin-top: 30%;
 }
