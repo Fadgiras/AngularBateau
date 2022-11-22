@@ -2,6 +2,47 @@ ion-content {
     --background: #ccc url("../../assets/beach1.jpg") no-repeat center center / cover;
 }
 
+ion-header {
+    text-align: center;
+}
+
+ion-footer {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+ion-grid {
+    align-items: center;
+    display: flex;
+    align-content: center;
+
+}
+
+ion-row {
+    flex: 1 100px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ion-button {
+    transition-duration: 0.7s;
+    background-color: black;
+    color: white;
+    width: 100%;
+    flex: 2 auto;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+ion-button:hover {
+    background-color: grey;
+    /* Green */
+    color: white;
+}
+
 h1 {
     text-align: center;
 }
@@ -33,4 +74,8 @@ a:hover {
 
 .espace {
     margin-top: 30%;
+}
+
+.box {
+    margin-top: 20%;
 }
