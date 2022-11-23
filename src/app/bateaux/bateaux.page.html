@@ -1,18 +1,106 @@
 <ion-app>
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-buttons slot="start" (click)="onGoToHome()">
-        <img class="avatar" src="./../../assets/bateauthibaultLogo.PNG" />
-        <ion-title>
-          BATEAUX
-        </ion-title>
-      </ion-buttons>
-      <ion-buttons slot="end" color="primay">
-        <ion-menu-button auto-hide="false"></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primay">
+        <ion-title>MENU</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="start" (click)="onGoToHome()">
+          <img class="avatar" src="./../../assets/bateauthibaultLogo.PNG" />
+          <ion-title>
+            NOS BATEAUX
+          </ion-title>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
 
-  </ion-content>
+    <!-- <ion-content [fullscreen]="true" class="ion-padding">
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">
+          Bateau Thibault
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-list>
+      <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
+    </ion-list>
+  </ion-content> -->
+
+    <ion-content>
+      <div>
+        <br />
+        <div class="avatar2">
+          <h1>Nos Bateaux partenaires</h1>
+        </div>
+        <br />
+        <div>
+          <h4 class="text-style">
+            Toutes les eaux mênent à Thibault<br />
+          </h4>
+        </div>
+        <div>
+          <p><a>
+              <code>06.63.99.99.78</code><br />
+              lebateaudethibault@gmail.com<br />
+              www.facebook.com/lebateaudethibault
+            </a>
+          </p>
+        </div>
+
+
+        <div>
+          <ion-grid>
+            <div>
+              <ion-row>
+                <ion-col class="ion-align-self-start">
+                  <ion-button fill="outline">
+                    <ion-icon name="boat-outline"></ion-icon>&nbsp; De la Brise
+                  </ion-button>
+                </ion-col>
+                <ion-col class="ion-align-self-center">
+                  <ion-button fill="outline">
+                    <ion-icon name="restaurant-outline"></ion-icon>&nbsp; Saphir
+                  </ion-button>
+                </ion-col>
+                <ion-col class="ion-align-self-end">
+                  <ion-button fill="outline">
+                    <ion-icon name="receipt-outline"></ion-icon>&nbsp; Gast Micher
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button fill="outline">
+                    <ion-icon name="call-outline"></ion-icon>&nbsp; Aquilon
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button fill="outline">
+                    <ion-icon name="call-outline"></ion-icon>&nbsp; Contact
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button fill="outline">
+                    <ion-icon name="call-outline"></ion-icon>&nbsp; Contact
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-grid>
+        </div>
+      </div>
+    </ion-content>
+  </div>
 </ion-app>
