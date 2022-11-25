@@ -1,19 +1,28 @@
 <ion-app>
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-buttons slot="start" (click)="onGoToHome()">
-        <img class="avatar" src="./../../assets/bateauthibaultLogo.PNG" />
-        <ion-title>
-          LE BATEAU DE THIBAULT
-        </ion-title>
-      </ion-buttons>
-      <ion-buttons slot="end" color="primay">
-        <ion-menu-button auto-hide="false"></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primay">
+        <ion-title>MENU</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">This is the menu content.</ion-content>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header [translucent]="true">
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="start" (click)="onGoToHome()">
+          <img class="avatar" src="./../../assets/bateauthibaultLogo.PNG" />
+          <ion-title>
+            LE BATEAU DE THIBAULT
+          </ion-title>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
 
-  <!-- <ion-content [fullscreen]="true" class="ion-padding">
+    <!-- <ion-content [fullscreen]="true" class="ion-padding">
     <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
       <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
@@ -31,62 +40,65 @@
     </ion-list>
   </ion-content> -->
 
-  <ion-content>
-    <div class="espace">
-      <h1>Le bateau de Thibault</h1>
-      <br />
-      <div class="box">
-        <h4 class="text-style">
-          Vente en direct de notre bateau<br />
-          Produits selon la saison, Livraison sur Paris<br />
-        </h4>
-      </div>
+    <ion-content>
       <div>
-        <p><a>
-            <code>06.63.99.99.78</code><br />
-            lebateaudethibault@gmail.com<br />
-            www.facebook.com/lebateaudethibault
-          </a>
-        </p>
-      </div>
+        <div class="avatar2">
+          <h1><img src="./../../assets/lebateaudethibault.PNG" /></h1>
+        </div>
+        <br />
+        <div class="box">
+          <h4 class="text-style">
+            Vente en direct de notre bateau<br />
+            Produits selon la saison, Livraison sur Paris<br />
+          </h4>
+        </div>
+        <div>
+          <p><a>
+              <code>06.63.99.99.78</code><br />
+              lebateaudethibault@gmail.com<br />
+              www.facebook.com/lebateaudethibault
+            </a>
+          </p>
+        </div>
 
 
-      <div>
-        <ion-grid>
-          <div>
-            <ion-row>
-              <ion-col class="ion-align-self-start">
-                <ion-button fill="outline" (click)="onGoToProduits()">
-                  <ion-icon name="fish-outline">
-                  </ion-icon>&nbsp; Produits et promotions
-                </ion-button>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="ion-align-self-start">
-                <ion-button fill="outline" (click)="onGoToBateaux()">
-                  <ion-icon name="boat-outline"></ion-icon>&nbsp; Bateaux
-                </ion-button>
-              </ion-col>
-              <ion-col class="ion-align-self-center">
-                <ion-button fill="outline" (click)="onGoToRestaurants()">
-                  <ion-icon name="restaurant-outline"></ion-icon>&nbsp; Restaurants
-                </ion-button>
-              </ion-col>
-              <ion-col class="ion-align-self-end">
-                <ion-button fill="outline" (click)="onGoToRecettes()">
-                  <ion-icon name="receipt-outline"></ion-icon>&nbsp; Recettes
-                </ion-button>
-              </ion-col>
-              <ion-col>
-                <ion-button fill="outline" (click)="onGoToContact()">
-                  <ion-icon name="call-outline"></ion-icon>&nbsp; Contact
-                </ion-button>
-              </ion-col>
-            </ion-row>
-          </div>
-        </ion-grid>
+        <div>
+          <ion-grid>
+            <div>
+              <ion-row>
+                <ion-col class="ion-align-self-start">
+                  <ion-button fill="outline" (click)="onGoToProduits()">
+                    <ion-icon name="fish-outline">
+                    </ion-icon>&nbsp; Produits et promotions
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="ion-align-self-start">
+                  <ion-button fill="outline" (click)="onGoToBateaux()">
+                    <ion-icon name="boat-outline"></ion-icon>&nbsp; Bateaux
+                  </ion-button>
+                </ion-col>
+                <ion-col class="ion-align-self-center">
+                  <ion-button fill="outline" (click)="onGoToRestaurants()">
+                    <ion-icon name="restaurant-outline"></ion-icon>&nbsp; Restaurants
+                  </ion-button>
+                </ion-col>
+                <ion-col class="ion-align-self-end">
+                  <ion-button fill="outline" (click)="onGoToRecettes()">
+                    <ion-icon name="receipt-outline"></ion-icon>&nbsp; Recettes
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button fill="outline" (click)="onGoToContact()">
+                    <ion-icon name="call-outline"></ion-icon>&nbsp; Contact
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-grid>
+        </div>
       </div>
-    </div>
-  </ion-content>
+    </ion-content>
+  </div>
 </ion-app>
