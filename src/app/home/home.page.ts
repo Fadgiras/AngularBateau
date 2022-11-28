@@ -6,6 +6,7 @@ import { CartModalPage } from '../pages/cart-modal/cart-modal.page';
 
 import { Router } from '@angular/router';
 import { RefresherCustomEvent } from '@ionic/angular';
+import { TabsPage } from './../tabs/tabs.page';
 
 import { DataService, Message } from '../services/data.service';
 import '../../zone-flags';
@@ -16,8 +17,8 @@ import '../../zone-flags';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  cart : Product[] = [];
-  products : Product[] = [];
+  cart: Product[] = [];
+  products: Product[] = [];
   cartItemCount!: BehaviorSubject<number>;
 
   @ViewChild('cart', { static: false, read: ElementRef })

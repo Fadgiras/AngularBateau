@@ -1,0 +1,80 @@
+element.style {}
+
+.page-container {
+    transition: all .45s cubic-bezier(.29, .63, .44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+user agent stylesheet div {
+    display: block;
+}
+
+body,
+input,
+textarea,
+button,
+select {
+    font-size: 16px;
+    font-family: Work Sans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #4c5053;
+    line-height: 1.5;
+}
+
+body,
+input,
+textarea,
+button,
+select {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p {
+    text-align: center;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+}
+
+.drawer-page-content:after {
+    visibility: hidden;
+    opacity: 0;
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0009;
+    z-index: 8;
+    transition: all .45s cubic-bezier(.29, .63, .44, 1);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+ion-col {
+    background-color: #135d54;
+    border: solid 1px #fff;
+    color: #fff;
+    text-align: center;
+}

@@ -1,132 +1,135 @@
 <ion-app>
-  <ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar color="primay">
-        <ion-title>MENU</ion-title>
-        <ion-button color="light" class="ion-fab-button" (click)="openCart()" #cart vertical="top" horizontal="end"
-          slot="end">
-          <div class="cart-length">{{ cartItemCount | async }}</div>
-          <ion-icon name="cart" class="cart-icon"></ion-icon>
+  <ion-content [fullscreen]="true">
+    <ion-card color="light">
+      <img alt="Silhouette of mountains" src="./../../assets/lebateaudethibault.PNG" />
+      <ion-card-header>
+        <ion-card-title>
+          Vente en direct de notre bateau<br />
+          Produits selon la saison, Livraison sur Paris<br />
+        </ion-card-title>
+        <ion-card-subtitle><br />
+          <p>06.63.99.99.78</p>
+          <p>lebateaudethibault@gmail.com</p>
+          <p>www.facebook.com/lebateaudethibault</p>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card color="light" fill="outline" [routerLink]="['/produits']">
+      <img class="img" alt="produits" src="./../../assets/IMG_9055_720x.webp" />
+      <ion-card-header>
+        <ion-card-title>Produits et promotions</ion-card-title>
+        <ion-card-subtitle>Du bateau jusqu'à vous ...
+        </ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Rien de plus simple !
+        <br />
+        - Retrouvez les poissons pêchés dans les différents onglets en haut de cette page, selectionnez les produits que
+        vous voulez recevoir en vérifiant que la quantité ainsi que la taille sont bien celles souhaitées.
+        <br />
+        <ion-button class="ion-align-self-start" fill="outline">
+          <ion-icon name="fish">
+          </ion-icon>
         </ion-button>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item lines="none" (click)="onGoToProduits()">
-          <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-          </ion-thumbnail>
-          <ion-label>Produits</ion-label>
-        </ion-item>
-        <ion-item lines="none" (click)="onGoToBateaux()">
-          <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-          </ion-thumbnail>
-          <ion-label>Bateaux</ion-label>
-        </ion-item>
-        <ion-item lines="none" (click)="onGoToRestaurants()">
-          <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-          </ion-thumbnail>
-          <ion-label>Restaurants</ion-label>
-        </ion-item>
-        <ion-item lines="none" (click)="onGoToRecettes()">
-          <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-          </ion-thumbnail>
-          <ion-label>Recettes</ion-label>
-        </ion-item>
-        <ion-item lines="none" (click)="onGoToContact()">
-          <ion-thumbnail slot="start">
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-          </ion-thumbnail>
-          <ion-label>Contact</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-  <div class="ion-page" id="main-content">
-    <ion-header [translucent]="true">
-      <ion-toolbar>
-        <ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light" fill="outline" [routerLink]="['/bateaux']">
+      <img class="img" alt="Silhouette of mountains" src="./../../assets/bateaux_de_thibault_720x.webp" />
+      <ion-card-header>
+        <ion-card-title>Bateaux</ion-card-title>
+        <ion-card-subtitle>Les Bateaux avec lesquels nous travaillons:</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Voici les bateaux avec lesquels nous travaillons !
+        <br />
+        <ion-button class="ion-align-self-start" fill="outline">
+          <ion-icon name="boat"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light" fill="outline" [routerLink]="['/restaurants']">
+      <img class="img" alt="Silhouette of mountains" src="./../../assets/757777_MR.jpg" />
+      <ion-card-header>
+        <ion-card-title>Restaurants</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+        <br />
+        <ion-button class="ion-align-self-start" fill="outline">
+          <ion-icon name="restaurant"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light" fill="outline" (click)="onGoToRecettes()">
+      <img class="img" alt="Silhouette of mountains" src="./../../assets/crevettes-roties-aux-oignons.jpg" />
+      <ion-card-header>
+        <ion-card-title>Recettes</ion-card-title>
+        <ion-card-subtitle>Nous vous proposons des recettes de saisons !</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Suivez nous sur nos réseaux sociaux pour ne manquer aucune recette exclusif.
+        <br />
+        <ion-button class="ion-align-self-start" fill="outline">
+          <ion-icon name="newspaper"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light" fill="outline" (click)="onGoToContact()">
+      <img class="img" alt="Silhouette of mountains"
+        src="./../../assets/christophe-et-goulven-ont-pris-contact-sur_5654680_676x495p.jpg" />
+      <ion-card-header>
+        <ion-card-title>Contact</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <br />
+        <ion-button class="ion-align-self-start" fill="outline">
+          <ion-icon name="call"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="light" fill="outline">
+      <ion-card-header>
+        <ion-card-title>Nous contacter:
+        </ion-card-title>
+        <ion-card-subtitle>
+          <p>lebateaudethibault@gmail.com<br>06.63.99.99.78</p>
+          <p><br>N'hésitez pas à nous envoyer des photos de vos délicieuses créations par email, messages privés,
+            sms ! </p>
+          <p>Nous les partagerons sur nos réseaux pour donner des idées de repas à tous les clients!</p>
+          <p>Bon appetit !</p>
+          <p>Siege sociale : RCS Creteil B 823&nbsp;423&nbsp;97 - Siret: 82342397500023 </p>
+          <p>Etablissement préparation situé : Box N°10, Criée de Cherbourg, 50100 Cherbourg.<br>N° agrement
+            sanitaire: FR.50.129.072.CE</p>
+        </ion-card-subtitle>
+      </ion-card-header>
+      <br />
+      <ion-card-content>
+        <ion-grid [fixed]="true">
           <ion-row>
-            <ion-col>
-              
+            <ion-col URL="https://www.facebook.com/lebateaudethibault">
+              <ion-icon name="logo-facebook"></ion-icon>
             </ion-col>
-            <ion-col>
-              <ion-buttons (click)="onGoToHome()">
-                <img class="avatar" src="./../../assets/bateauthibaultLogo.PNG" />
-              </ion-buttons>
+            <ion-col URL="https://www.instagram.com/lebateaudethibault/">
+              <ion-icon name="logo-instagram"></ion-icon>
             </ion-col>
-            <ion-col size="auto">
-              <ion-buttons>
-                <ion-menu-button></ion-menu-button>
-              </ion-buttons>
+            <ion-col URL="https://www.youtube.com/lebateaudethibault">
+              <ion-icon name="logo-youtube"></ion-icon>
             </ion-col>
           </ion-row>
         </ion-grid>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content [fullscreen]="true">
-      <div>
-        <div class="avatar2">
-          <h1><img src="./../../assets/lebateaudethibault.PNG" /></h1>
-        </div>
-        <br />
-        <div class="box">
-          <h4 class="text-style">
-            Vente en direct de notre bateau<br />
-            Produits selon la saison, Livraison sur Paris<br />
-          </h4>
-        </div>
-        <div>
-          <p><a>
-              <code>06.63.99.99.78</code><br />
-              lebateaudethibault@gmail.com<br />
-              www.facebook.com/lebateaudethibault
-            </a>
-          </p>
-        </div>
-
-
-        <div>
-          <ion-grid>
-            <div>
-              <ion-row>
-                <ion-col class="ion-align-self-start">
-                  <ion-button fill="outline" (click)="onGoToProduits()">
-                    <ion-icon name="fish-outline">
-                    </ion-icon>&nbsp; Produits et promotions
-                  </ion-button>
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col class="ion-align-self-start">
-                  <ion-button fill="outline" (click)="onGoToBateaux()">
-                    <ion-icon name="boat-outline"></ion-icon>&nbsp; Bateaux
-                  </ion-button>
-                </ion-col>
-                <ion-col class="ion-align-self-center">
-                  <ion-button fill="outline" (click)="onGoToRestaurants()">
-                    <ion-icon name="restaurant-outline"></ion-icon>&nbsp; Restaurants
-                  </ion-button>
-                </ion-col>
-                <ion-col class="ion-align-self-end">
-                  <ion-button fill="outline" (click)="onGoToRecettes()">
-                    <ion-icon name="receipt-outline"></ion-icon>&nbsp; Recettes
-                  </ion-button>
-                </ion-col>
-                <ion-col>
-                  <ion-button fill="outline" (click)="onGoToContact()">
-                    <ion-icon name="call-outline"></ion-icon>&nbsp; Contact
-                  </ion-button>
-                </ion-col>
-              </ion-row>
-            </div>
-          </ion-grid>
-        </div>
-      </div>
-    </ion-content>
-  </div>
+        <span>© 2022, Le Bateau de Thibault Commerce électronique propulsé parShopify</span>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
 </ion-app>

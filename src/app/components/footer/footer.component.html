@@ -1,0 +1,159 @@
+<div class="agJsWidget" style="">
+  <script type="text/javascript">
+    var urlCertificate = "https://www.societe-des-avis-garantis.fr/le-bateau-de-thibault/";
+
+  </script>
+
+  <style>
+    .agJsWidget {
+      display: block !important;
+      line-height: normal;
+    }
+
+    #sag_b_cocarde .container {
+      background: none;
+      border: none !important;
+    }
+
+    .sag_badge .container {
+      max-width: 100% !important;
+      background-color: unset !important;
+    }
+
+    .sag_badge {
+      transform-origin: 0% 100% !important;
+    }
+
+    @media screen and (min-width: 900px) {
+      .sag_badge {
+        -webkit-transform: scale(0.95) !important;
+        -ms-transform: scale(0.95) !important;
+      }
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 900px) {
+      .sag_badge {
+        -webkit-transform: scale(0.8) !important;
+        -ms-transform: scale(0.8) !important;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .sag_badge {
+        -webkit-transform: scale(0.55) !important;
+        -ms-transform: scale(0.55) !important;
+      }
+    }
+
+    .agJsWidget {
+      position: fixed;
+      z-index: 99999;
+      left: 0px;
+      bottom: 0px;
+    }
+  </style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+    .sag_badge {
+      margin: 5px;
+    }
+
+    .sag_badge * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center
+    }
+
+    .sag_badge .container {
+      width: 100% !important;
+      height: 100% !important;
+      position: relative !important;
+      margin: 0 !important;
+      min-width: unset !important;
+    }
+
+    .jsWidgetLargeNote,
+    .sagInfo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-family: 'Oswald', Arial !important;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .jsWidgetLargeNote {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: #1c5399;
+    }
+
+    .jsWidgetLargeNote big {
+      line-height: inherit;
+      font-weight: bold;
+      font-size: 38px;
+      letter-spacing: -1.5px;
+      font-family: 'Oswald', Arial !important;
+    }
+
+    /*BADGE COCARDE*/
+    #sag_b_cocarde {
+      cursor: pointer;
+      display: block;
+      width: 125px;
+      height: 134px;
+      background: url(https://www.societe-des-avis-garantis.fr/wp-content/plugins/ag-core/images/widgets/cocarde.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    #sag_b_cocarde .jsWidgetLargeNote {
+      top: 45px;
+      color: #ffffff;
+      font-size: 12px;
+    }
+
+    #sag_b_cocarde .jsWidgetLargeNote big {
+      line-height: inherit;
+      font-size: 20px;
+      color: white;
+    }
+
+    #sag_b_cocarde .sagInfo {
+      top: 66px;
+      font-size: 10.5px;
+      color: #ffffff;
+    }
+  </style>
+  <div id="sag_b_cocarde" class="sag_badge" onclick="openCertificate()">
+    <div class="container">
+      <div class="jsWidgetLargeNote">9.7/10</div>
+      <div class="sagInfo">101 avis</div>
+      <div class="animStarsCont">
+        <div class="animStars" style="width:100%"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript"> //Loading JS in file to avoid new http request
+
+    function openCertificate() {
+      var win = window.open(urlCertificate, '_blank');
+      if (win) {
+        //Browser has allowed it to be opened
+        win.focus();
+      } else {
+        //Browser has blocked it
+        alert('Merci d\'autoriser les popups.');
+      }
+    }
+
+  </script>
+</div>

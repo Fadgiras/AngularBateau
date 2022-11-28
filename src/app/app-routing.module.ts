@@ -1,10 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+import { SharedComponentsModule } from './components/shared-components.module';
+import { TabsPage } from 'src/app/tabs/tabs.module';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home', pathMatch: 'full'
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: 'home',
@@ -17,11 +23,6 @@ const routes: Routes = [
   {
     path: 'message/:id',
     loadChildren: () => import('./view-message/view-message.module').then(m => m.ViewMessagePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
   },
   {
     path: 'contact',
@@ -43,12 +44,19 @@ const routes: Routes = [
     path: 'produits',
     loadChildren: () => import('./produits/produits.module').then(m => m.ProduitsPageModule)
   },
-
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    SharedComponentsModule
   ],
   exports: [RouterModule]
 })
