@@ -17,6 +17,50 @@ import '../../../zone-flags';
 })
 export class HeaderComponent implements OnInit {
 
+  public appHeaders = [
+    {
+      title: 'Accueil',
+      url: '/src/app/home',
+      loadChildren: () => import('../../home/home.module').then(m => m.HomePageModule),
+      icon: 'home'
+    },
+    // {
+    //   title: 'Log In',
+    //   url: '/auth/login',
+    //   ionicIcon: 'log-in-outline'
+    // },
+    // {
+    //   title: 'Sign Up',
+    //   url: '/auth/signup',
+    //   ionicIcon: 'person-add-outline'
+    // },
+    {
+      title: 'Nos Produits',
+      url: '/src/app/produits',
+      ionicIcon: 'log-in-outline'
+    },
+    {
+      title: 'Nos Bateaux',
+      url: '/src/app/bateaux',
+      ionicIcon: 'person-add-outline'
+    },
+    {
+      title: 'Nos Restaurants',
+      url: '/src/app/restaurants',
+      ionicIcon: 'log-in-outline'
+    },
+    {
+      title: 'Nos Recettes',
+      url: '/src/app/recettes',
+      ionicIcon: 'person-add-outline'
+    },
+    {
+      title: 'Contact',
+      url: '/src/app/contact',
+      ionicIcon: 'person-add-outline'
+    }
+  ];
+
   cart: Product[] = [];
   products: Product[] = [];
   cartItemCount!: BehaviorSubject<number>;

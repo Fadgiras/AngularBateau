@@ -1,63 +1,105 @@
-<ion-app>
-  <ion-content>
-    <div>
-      <br />
-      <div class="avatar2">
-        <h1>Nos restaurants partenaires</h1>
-      </div>
-      <br />
-      <div>
-        <h4 class="text-style">
-          Tous les restaurants partenaires avec le bateau de Thibault<br />
-        </h4>
-      </div>
-      <div>
-        <p><a>
-            <code>06.63.99.99.78</code><br />
-            lebateaudethibault@gmail.com<br />
-            www.facebook.com/lebateaudethibault
-          </a>
-        </p>
-      </div>
+<ion-content [fullscreen]="true">
+  <ion-card color="none" fill="outline">
+    <img class="img" alt="Silhouette of mountains" src="./../../assets/bateaux_de_thibault_720x.webp" />
+    <ion-card-header>
+      <ion-card-title>Nos restaurants partenaires</ion-card-title>
+      <ion-card-subtitle>Tous les restaurants partenaires avec le bateau de Thibault</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
 
-      <div>
-        <ion-grid>
-          <div>
-            <ion-row>
-              <ion-col class="ion-align-self-start">
-                <ion-button fill="outline">
-                  Bistrot des Gascons
-                </ion-button>
-              </ion-col>
-              <ion-col class="ion-align-self-center">
-                <ion-button fill="outline">
-                  Les fous de l'Île
-                </ion-button>
-              </ion-col>
-              <ion-col class="ion-align-self-end">
-                <ion-button fill="outline">
-                  Bistrot Landais
-                </ion-button>
-              </ion-col>
-              <ion-col>
-                <ion-button fill="outline">
-                  Villa 9-Trois
-                </ion-button>
-              </ion-col>
-              <ion-col>
-                <ion-button fill="outline">
-                  Bistrot du Sommelier
-                </ion-button>
-              </ion-col>
-              <ion-col>
-                <ion-button fill="outline">
-                  Devenez partenaire!
-                </ion-button>
-              </ion-col>
-            </ion-row>
-          </div>
-        </ion-grid>
-      </div>
-    </div>
-  </ion-content>
-</ion-app>
+  <ion-grid>
+    <ion-row>
+      <ion-col push-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Bistrot des Gascons</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col pull-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Les fous de l'Île</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col push-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Bistrot Landais</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col pull-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Villa 9-Trois</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col push-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Bistrot du Sommelier</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col pull-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Devenez partenaire!</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -3,8 +3,6 @@
     <ion-grid no-padding>
       <ion-row class="container">
         <ion-col>
-          <ion-toggle color="dark" [checked]="false">
-          </ion-toggle>
         </ion-col>
         <ion-col>
           <img src="./../../assets/bateauthibaultLogo.PNG" width="50" height="50" (click)="onGoToHome()" />
@@ -23,7 +21,9 @@
 
 <ion-menu side="end" contentId="main-content">
   <ion-header>
-    <ion-toolbar color="primay">
+    <ion-toolbar>
+      <ion-toggle [checked]="false" slot="end">
+      </ion-toggle>
       <ion-title>MENU</ion-title>
       <ion-button color="light" class="ion-fab-button" (click)="openCart()" #cart vertical="top" horizontal="end"
         slot="start">
@@ -33,35 +33,30 @@
     </ion-toolbar>
   </ion-header>
   <ion-list>
+    <ion-menu-toggle autoHide="true" *ngFor="let p of appHeaders; let i = index">
+      <ion-item color="primary" class="align-center">
+        <!-- <ion-icon></ion-icon> -->
+        <ion-label>
+          {{p.title}}
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+  </ion-list>
+  <!-- <ion-list>
     <ion-item lines="none" (click)="onGoToProduits()">
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="./../../../assets/produits.jpg" />
-      </ion-thumbnail>
       <ion-label>Produits</ion-label>
     </ion-item>
     <ion-item lines="none" (click)="onGoToBateaux()">
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="./../../../assets/bateau.png" />
-      </ion-thumbnail>
       <ion-label>Bateaux</ion-label>
     </ion-item>
     <ion-item lines="none" (click)="onGoToRestaurants()">
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="./../../../assets/restau.jpg" />
-      </ion-thumbnail>
       <ion-label>Restaurants</ion-label>
     </ion-item>
     <ion-item lines="none" (click)="onGoToRecettes()">
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="./../../../assets/recette.png" />
-      </ion-thumbnail>
       <ion-label>Recettes</ion-label>
     </ion-item>
     <ion-item lines="none" (click)="onGoToContact()">
-      <ion-thumbnail slot="start">
-        <img alt="Silhouette of mountains" src="./../../../assets/contact.png" />
-      </ion-thumbnail>
       <ion-label>Contact</ion-label>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-menu>

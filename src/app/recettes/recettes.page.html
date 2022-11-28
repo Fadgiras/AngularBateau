@@ -1,64 +1,73 @@
-<ion-app>
-  <ion-content>
-    <div>
-      <br />
-      <div class="avatar2">
-        <h1>Nos recettes</h1>
-      </div>
-      <br />
-      <div>
-        <h4 class="text-style">
-          Toutes les recettes du bateau de Thibault<br />
-        </h4>
-      </div>
-      <div>
-        <p><a>
-            <code>06.63.99.99.78</code><br />
-            lebateaudethibault@gmail.com<br />
-            www.facebook.com/lebateaudethibault
-          </a>
-        </p>
-      </div>
+<ion-content [fullscreen]="true">
+  <ion-card color="none" fill="outline">
+    <img class="img" alt="Silhouette of mountains" src="./../../assets/bateaux_de_thibault_720x.webp" />
+    <ion-card-header>
+      <ion-card-title>Nos recettes</ion-card-title>
+      <ion-card-subtitle>Toutes les recettes du bateau de Thibault</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col push-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Homard</ion-card-title>
+          </ion-card-header>
 
-      <div>
-        <ion-grid>
-          <div>
-            <ion-row>
-              <ion-col class="ion-align-self-start">
-                <ion-button fill="outline">
-                  <ion-icon name="boat-outline"></ion-icon>&nbsp; Homard
-                </ion-button>
-              </ion-col>
-              <ion-col class="ion-align-self-center">
-                <ion-button fill="outline">
-                  <ion-icon name="restaurant-outline"></ion-icon>&nbsp; St Jacques
-                </ion-button>
-              </ion-col>
-              <ion-col class="ion-align-self-end">
-                <ion-button fill="outline">
-                  <ion-icon name="receipt-outline"></ion-icon>&nbsp; Bar
-                </ion-button>
-              </ion-col>
-              <ion-col>
-                <ion-button fill="outline">
-                  <ion-icon name="call-outline"></ion-icon>&nbsp; Tourteau
-                </ion-button>
-              </ion-col>
-              <ion-col>
-                <ion-button fill="outline">
-                  <ion-icon name="call-outline"></ion-icon>&nbsp; Recette
-                </ion-button>
-              </ion-col>
-              <ion-col>
-                <ion-button fill="outline">
-                  <ion-icon name="call-outline"></ion-icon>&nbsp; Recette
-                </ion-button>
-              </ion-col>
-            </ion-row>
-          </div>
-        </ion-grid>
-      </div>
-    </div>
-  </ion-content>
-</ion-app>
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col pull-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>St Jacques</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col push-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Bar</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col pull-sm="6">
+        <ion-card color="light" fill="outline">
+          <ion-card-header>
+            <ion-card-title>Tourteau</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-button fill="outline">
+              <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
