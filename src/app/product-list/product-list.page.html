@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>product-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list> 
+    <ion-item *ngFor="let product of getProducts()" [routerLink]="'/product/' + product.id" [detail]="false">
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            {{product.name}}
+          </ion-col>
+          <ion-col size="auto">
+            {{product.price + " €/" + product.unit}} 
+          </ion-col>
+          <ion-col size="auto">
+            <ion-icon name="chevron-forward" size="small"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-note>
+              {{product.comments}}
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      </ion-item>
+  </ion-list>
+</ion-content>

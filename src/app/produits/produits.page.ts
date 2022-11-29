@@ -75,4 +75,8 @@ export class ProduitsPage implements OnInit {
   onGoToHome() {
     this.router.navigate(['home']);
   }
+
+  onGoToRestaurants() {
+    this.router.navigate(['/public/restaurants']);
+  }
 }

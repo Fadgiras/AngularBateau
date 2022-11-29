@@ -4,16 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { BateauxPageRoutingModule } from './bateaux-routing.module';
+import { ProductPageRoutingModule } from './product-routing.module';
 
-import { BateauxPage } from './bateaux.page';
-import { Route, RouterModule, Routes } from '@angular/router';
+import { ProductPage } from './product.page';
+import { Routes, RouterModule } from '@angular/router';
 import { SharedComponentsModule } from '../components/shared-components.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: BateauxPage
+    component: ProductPage
   }
 ];
 
@@ -22,10 +22,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    BateauxPageRoutingModule,
+    ProductPageRoutingModule,
     RouterModule.forChild(routes),
     SharedComponentsModule
   ],
-  declarations: [BateauxPage]
+  declarations: [ProductPage]
 })
-export class BateauxPageModule { }
+export class ProductPageModule { }

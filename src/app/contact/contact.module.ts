@@ -7,14 +7,25 @@ import { IonicModule } from '@ionic/angular';
 import { ContactPageRoutingModule } from './contact-routing.module';
 
 import { ContactPage } from './contact.page';
+import { RouterModule, Routes } from '@angular/router';
+import { SharedComponentsModule } from '../components/shared-components.module';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ContactPage
+  }
+];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ContactPageRoutingModule
+    ContactPageRoutingModule,
+    RouterModule.forChild(routes),
+    SharedComponentsModule
   ],
   declarations: [ContactPage]
 })
-export class ContactPageModule {}
+export class ContactPageModule { }

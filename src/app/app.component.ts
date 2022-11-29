@@ -26,16 +26,6 @@ export class AppComponent {
       title: 'Tabs',
       url: '/tabs',
       icon: 'tabs'
-    },
-    {
-      title: 'Log In',
-      url: '/auth/login',
-      ionicIcon: 'log-in-outline'
-    },
-    {
-      title: 'Sign Up',
-      url: '/auth/signup',
-      ionicIcon: 'person-add-outline'
     }
   ];
 

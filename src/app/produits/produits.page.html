@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
-  <ion-card color="none" fill="outline">
-    <img class="img" alt="Silhouette of mountains" src="./../../assets/bateaux_de_thibault_720x.webp" />
+  <ion-card color="light" fill="outline">
+    <img class="img" alt="Silhouette of mountains" src="../../../assets/IMG_9055_720x.webp" />
     <ion-card-header>
       <ion-card-title>Choisissez vos produits</ion-card-title>
       <ion-card-subtitle>Toutes les eaux mênent à Thibault</ion-card-subtitle>
@@ -73,33 +73,35 @@
 
 
   <!--fab button at top right that opens shopping cart-->
-  <!-- <ion-fab vertical="top" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="openCart()" #cart>
-          <div class="cart-length">{{ cartItemCount | async }}</div>
-          <ion-icon name="cart" class="cart-icon"></ion-icon>
-        </ion-fab-button>
-      </ion-fab> -->
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openCart()" #cart>
+      <div class="cart-length">{{ cartItemCount | async }}</div>
+      <ion-icon name="cart" class="cart-icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
-  <!--list of products in 2 columns: product name and price, add icon-->
-  <ion-list>
-    <ion-card *ngFor="let p of products">
-      <ion-card-header>
-        <ion-card-title>{{ p.name }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-row class="ion-align-items-center">
-          <ion-col size="8">
-            <ion-label color="secondary">
-              <b>{{ p.price | currency:'EUR' }}</b>
-            </ion-label>
-          </ion-col>
-          <ion-col size="4" class="ion-text-right">
-            <ion-button fill="clear" (click)="addToCart(p)">
-              <ion-icon name="add"></ion-icon>
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
+  <!-- list of products in 2 columns: product name and price, add icon -->
+  <ion-grid>
+    <ion-list>
+      <ion-card *ngFor="let p of products">
+        <ion-card-header>
+          <ion-card-title>{{ p.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row class="ion-align-items-center">
+            <ion-col size="8">
+              <ion-label color="secondary">
+                <b>{{ p.price | currency:'EUR' }}</b>
+              </ion-label>
+            </ion-col>
+            <ion-col size="4" class="ion-text-right">
+              <ion-button fill="clear" (click)="addToCart(p)">
+                <ion-icon name="add"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ion-grid>
 </ion-content>
