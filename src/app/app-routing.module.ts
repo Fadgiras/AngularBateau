@@ -47,13 +47,22 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'product-list',
     loadChildren: () => import('./product-list/product-list.module').then( m => m.ProductListPageModule)
   },
   {
     path: 'product',
     loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
+  },
+  {
+    path: 'produits/cat/:id',
+    loadChildren: () => import('./produits/produits.module').then( m => m.ProduitsPageModule)
+  },
+  {
+    path: 'produits/sale',
+    loadChildren: () => import('./produits/produits.module').then( m => m.ProduitsPageModule)
   },
 
 ];

@@ -1,10 +1,10 @@
 import { CartService, Product } from './../services/cart.service';
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectorRef, ApplicationRef } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BehaviorSubject } from 'rxjs';
 import { CartModalPage } from '../pages/cart-modal/cart-modal.page';
 
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RefresherCustomEvent } from '@ionic/angular';
 
 import { DataService, Message } from '../services/data.service';
@@ -16,7 +16,9 @@ import '../../zone-flags';
   styleUrls: ['./produits.page.scss'],
 })
 export class ProduitsPage implements OnInit {
-
+  id = this.activatedRoute.snapshot.paramMap.get('id') as string | undefined
+  full = this.id ==undefined
+  selectedCat : number | string = this.id == undefined ? "True" : this.id as unknown as number
   cart: Product[] = [];
   products: Product[] = [];
   cartItemCount!: BehaviorSubject<number>;
@@ -24,10 +26,10 @@ export class ProduitsPage implements OnInit {
   @ViewChild('cart', { static: false, read: ElementRef })
   fab!: ElementRef;
 
-  constructor(private cartService: CartService, private modalCtrl: ModalController, private data: DataService, private router: Router) { }
+  constructor(private cartService: CartService, private modalCtrl: ModalController, private data: DataService, private router: Router, private appRef: ApplicationRef,private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.products = this.cartService.getProducts();
+        this.products = this.cartService.getProducts();
     this.cart = this.cartService.getCart();
     this.cartItemCount = this.cartService.getCartItemCount();
   }
@@ -78,5 +80,16 @@ export class ProduitsPage implements OnInit {
 
   onGoToRestaurants() {
     this.router.navigate(['/public/restaurants']);
+  }
+
+  selectCat(nb: number){
+    
+    console.log(this.selectedCat)
+    this.appRef.tick()
+  }
+
+  getSelectedCat(){
+    console.log(this.selectedCat)
+    return this.selectedCat
   }
 }
