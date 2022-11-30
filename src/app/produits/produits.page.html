@@ -56,7 +56,7 @@
       </ion-col>
 
       <ion-col pull-sm="6">
-        <ion-card color="light" fill="outline" [routerLink]="['/produits']">
+        <ion-card color="light" fill="outline" [routerLink]="['/produits/cat/sale']">
           <ion-card-header>
             <ion-card-title>Promotions</ion-card-title>
           </ion-card-header>
@@ -84,7 +84,26 @@
   <ion-grid>
     <ion-list>
       <ion-card *ngFor="let p of products">
-        <div *ngIf="full ? full : p.category == selectedCat as number">
+        <div *ngIf="full ? true : false">
+          <ion-card-header>
+            <ion-card-title>{{ p.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="8">
+                <ion-label color="secondary">
+                  <b>{{ p.price +" €/"+ p.unit }}</b>
+                </ion-label>
+              </ion-col>
+              <ion-col size="4" class="ion-text-right">
+                <ion-button fill="clear" (click)="addToCart(p)">
+                  <ion-icon name="add"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </div>
+        <div *ngIf="selectedCat == sale ? p.sale==true : p.category == selectedCat as number">
           <ion-card-header>
             <ion-card-title>{{ p.name }}</ion-card-title>
           </ion-card-header>

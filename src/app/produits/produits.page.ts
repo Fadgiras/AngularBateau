@@ -17,8 +17,9 @@ import '../../zone-flags';
 })
 export class ProduitsPage implements OnInit {
   id = this.activatedRoute.snapshot.paramMap.get('id') as string | undefined
+  sale = "sale"
   full = this.id ==undefined
-  selectedCat : number | string = this.id == undefined ? "True" : this.id as unknown as number
+  selectedCat : number | string = this.id == "sale" ? "sale" : this.id as unknown as number
   cart: Product[] = [];
   products: Product[] = [];
   cartItemCount!: BehaviorSubject<number>;
