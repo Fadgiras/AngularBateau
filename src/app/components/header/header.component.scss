@@ -1,0 +1,23 @@
+ion-col {
+    text-align: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center + unsafe;
+    align-items: stretch + unsafe;
+    align-content: center + unsafe;
+    gap: 10px;
+    row-gap: 10px;
+    column-gap: 20px
+}
+
+.head {
+    border-color: transparent !important;
+}
+
+.align-center {
+    text-align: center;
+    padding-top: 0px !important;
+}
